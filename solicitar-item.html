@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>Solicitação</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="main-head"></header>
+    <nav class="main-menu">
+      <ul>
+        <li>
+          <a href="/index.html">
+            <i class="fa fa-home fa-2x"></i>
+            <span class="nav-text"> Chamados </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="/solicitar-item.html">
+            <i class="fa fa-laptop fa-2x"></i>
+            <span class="nav-text"> Solicitar item </span>
+          </a>
+        </li>
+      </ul>
+      <ul class="logout">
+        <li>
+          <a href="/login.html">
+            <i class="fa fa-power-off fa-2x"></i>
+            <span class="nav-text"> Sair </span>
+          </a>
+        </li>
+      </ul>
+      <li class="has-subnav">
+        <a href="#">
+          <i class="fa fa-list fa-2x"></i>
+          <span class="nav-text">
+            Forms
+          </span>
+        </a>
+
+      </li>
+      <li class="has-subnav">
+        <a href="#">
+          <i class="fa fa-folder-open fa-2x"></i>
+          <span class="nav-text">
+            Pages
+          </span>
+        </a>
+
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa fa-bar-chart-o fa-2x"></i>
+          <span class="nav-text">
+            Graphs and Statistics
+          </span>
+        </a>
+      </li>
+    </nav>
+    <article class="content">
+      <h1 class="chamados">Solicitação de itens</h1>
+      <input type="button" value="Abertos" />
+      <input type="button" value="Fechados" />
+      <input class="novo-chamado" type="button" value="Novo Chamado" />
+      <hr />
+      <div class="new-item">
+        <div class="form-group">
+            <label for="uf">Produto</label>
+            <select class="form-control" id="uf">
+                <option value="selecione">Selecione..</option>
+                <option value="1">Item 1</option>
+                <option value="2">Item 2</option>
+                <option value="3">Item 3</option>
+                
+            </select>
+        </div>
+      </div>
+     
+    </article>
+    <aside class="side">
+      <input type="search" placeholder="Pesquisar..." />
+      <button type="submit" class="btn btn-secondary">Buscar</button>
+    </aside>
+    <div class="ad"></div>
+    <footer class="main-footer"></footer>
+  </div>
+</body>
+
+</html>

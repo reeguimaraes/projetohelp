@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="/css/style-cadastro.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <script src="/js/js.js"></script>
+    <div class="sidenav">
+        <div class="login-main-text">
+            <h2>Helpdesk<br> Controle TI</h2>
+            <p>Preencha as informações abaixo para se cadastrar!</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+                <form>
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" class="form-control" placeholder="E-mail corporativo">
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input class="form-control" id="name" type="text" placeholder="Nome completo"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cpf">Cpf/Cnpj:</label>
+                        <input placeholder="Digite o CPF ou CNPJ" class="form-control" id="cpf" type='text' name='cpfcnpj'
+                            onkeypress='mascaraMutuario(this,cpfCnpj)' onblur='clearTimeout()'>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">TELEFONE:</label>
+                        <input placeholder="Digite seu telefone" class="form-control" type="text" maxlength="14" onkeypress="mask(this, mphone);"
+                            onblur="mask(this, mphone);" />
+                    </div>
+                    <div class="form-group">
+                        <label for="celular">Celular:</label>
+                        <input placeholder="Digite seu celular" class="form-control" id="celular" type="text" onkeypress="mask(this, mphone);"
+                            onblur="mask(this, mphone);" />
+                    </div>
+                    <div class="form-group">
+                        <label for="cep">Cep</label>
+                        <input placeholder="Cep" class="form-control" id="cep" type="text" onblur="pesquisacep(this.value);" />
+                    </div>
+                    <div class="form-group">
+                        <label for="logradouro">Logradouro</label>
+                        <input class="form-control" id="logradouro" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="bairro">Bairro</label>
+                        <input class="form-control" id="bairro" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="cidade">Cidade</label>
+                        <input class="form-control" id="localidade" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="numero">Número</label>
+                        <input class="form-control" id="numero" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="complemento">Complemento</label>
+                        <input class="form-control" id="complemento" type="text" />
+                    </div>
+                    <div class="form-group">
+                        <label for="uf">Estado</label>
+                        <select class="form-control" id="uf">
+                            <option value="selecione">Selecione..</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Senha</label>
+                        <input type="password" class="form-control" placeholder="Digita sua senha">
+                    </div>
+
+                    <input class="btn btn-black" type="button" value="Cadastrar" onclick="verificar();">
+
+                    <button id="voltar" type="submit" class="btn btn-black">Voltar</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
