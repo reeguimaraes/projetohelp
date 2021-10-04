@@ -87,15 +87,15 @@
                   <option vlaue="suspensao">TI</option>
                   <option value="advertencia">CAL</option>
               </select>
-              <label>Departamento</label>
+              <label id="departamento" oninput="Update(this.value,'departamento')">Departamento</label>
                 
               </div>
               <div class="mb-3">
-                <label for="recipient-name" class="col-form-label">Assunto:</label>
+                <label for="recipient-name" class="col-form-label" oninput="Update(this.value,'assunto')">Assunto:</label>
                 <input type="text" class="form-control" id="assunto" />
               </div>
               <div class="mb-3">
-                <label for="message-text" class="col-form-label">Message:</label>
+                <label for="message-text" class="col-form-label"oninput="Update(this.value,'message')">Message:</label>
                 <textarea class="form-control" id="message"></textarea>
               </div>
             </form>
@@ -110,7 +110,7 @@
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
               Close
             </button>
-            <button type="button" id="criar-chamado" class="btn btn-primary">Send message</button>
+            <button type="button" id="insertBtn" class="btn btn-primary">Inserir</button>
           </div>
         </div>
       </div>
@@ -118,7 +118,7 @@
     
     <!-- FIM DO MODAL NOVO CHAMADO-->
       <hr />
-      <div class="chamado-aberto">
+      <div class="chamadoAberto">
         <a href="#" title="Ver os detalhes">
           <h4>Protocolo #: Trazer informação após criação</h4>
           <p>trazer informação do conteudo do chamado</p>
@@ -131,11 +131,11 @@
     </aside>
    
 
-    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.1.1/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
     <script src="./js/firebase.js"></script>
+    
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
   </script>
