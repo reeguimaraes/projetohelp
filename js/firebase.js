@@ -40,6 +40,7 @@ cloudDB.collection("Chamados").add(
 )
 .then(function (docRef){
   console.log("Document written with iD", docRef.id);
+  document.getElementById('assuntoChamado').innerHTML = `${Assunto}`;
   
 }).catch(function(error){
   console.error("Error Adding document", error);
